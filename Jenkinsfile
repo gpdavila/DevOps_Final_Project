@@ -33,8 +33,12 @@ node {
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://registry.hub.docker.com', "${registryCredential}") {
             dockerImage.push()
-            //app.push("${env.BUILD_NUMBER}")
-            //app.push("latest")
+        }
+    }
+    stage('Run Container') {
+			steps{
+				sh 'docker run -it --rm  --name "C_$BUILD_NUMBER" "${registry}"+":$BUILD_NUMBER"'
+			}
         }
     }
 }
