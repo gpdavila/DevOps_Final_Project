@@ -1,10 +1,8 @@
 node {
     //def app
-    environment {
-        registry = 'gabrielpiscoya/simplilearn'
-        registryCredential = 'dockerHub'
-        dockerImage = ''
-    }
+    def registry = 'gabrielpiscoya/simplilearn'
+    def registryCredential = 'dockerHub'
+    def dockerImage = ''
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
