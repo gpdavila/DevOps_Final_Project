@@ -36,7 +36,7 @@ node {
         }
     }
     stage('Run Container') {
-		steps{
+		steps {
 			sh 'docker run -it --rm  --name "C_$BUILD_NUMBER" "${registry}"+":$BUILD_NUMBER"'
 		}
      }
