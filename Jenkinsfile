@@ -1,5 +1,5 @@
 node {
-    //def app
+    //def appa
     def registry = 'gabrielpiscoya/simplilearn'
     def registryCredential = 'dockerHub'
     def dockerImage = ''
