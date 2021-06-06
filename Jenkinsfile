@@ -1,7 +1,7 @@
 node {
     //def app
     environment {
-        registry = "gabrielpiscoya/simplilearn"
+        registry = 'gabrielpiscoya/simplilearn'
         registryCredential = 'dockerHub'
         dockerImage = ''
     }
